@@ -25,3 +25,19 @@ airflow webserver --port 8080
 
 # Terminal 2: Start the scheduler
 airflow scheduler
+
+# To stop/restart airflow
+pkill -f "airflow"
+
+# DAGS
+located locally at:
+~/airflow/dags/
+
+## hourly_json_checker.py
+Checks if a forecast needs to re run every hour.
+
+### TODO
+Make Hourly Gage puller.
+Then run json checker in sequence.
+Then kickoff a model input maker.
+Then run a model.
